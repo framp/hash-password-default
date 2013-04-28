@@ -5,7 +5,7 @@ Just some code I use in my node projects to hash and check passwords
 
 
 ## How to use
-    > require('./hash-password-default')
+    > var hash = require('./hash-password-default')
     undefined
     > var lolcat = hash.hashPassword('lolcat')
     undefined
