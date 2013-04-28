@@ -5,17 +5,17 @@ var hash = {
   repetitions: 4
 };
 
-hash.generateHash: function(value){
+hash.generateHash = function(value){
   var v = crypto.createHash(this.algorithm); 
   v.update(value); 
   return v.digest();
 };
 
-hash.checkPassword: function(password, input){
+hash.checkPassword = function(password, input){
   return password === this.hashPassword(input, password.substr(0, password.length/2));
 };
 
-hash.hashPassword: function(password, salt){
+hash.hashPassword = function(password, salt){
   var repetitions = this.repetitions;
   salt = salt || this.generateHash(crypto.randomBytes(16));
   hash = this.generateHash (salt + password);
