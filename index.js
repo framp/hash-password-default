@@ -5,10 +5,10 @@ var hash = {
   repetitions: 4
 };
 
-hash.generateHash = function(value){
+hash.generateHash = function(value, encoding){
   var v = crypto.createHash(this.algorithm); 
   v.update(value); 
-  return v.digest();
+  return v.digest(encoding);
 };
 
 hash.checkPassword = function(password, input){
