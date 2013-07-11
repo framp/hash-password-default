@@ -1,14 +1,15 @@
 var crypto = require('crypto');
 
 var hash = {
-  algorithm: 'sha256',
-  repetitions: 4
+  algorithm: 'sha256'
+, repetitions: 4
+, encoding: 'hex'
 };
 
 hash.generateHash = function(value, encoding){
   var v = crypto.createHash(this.algorithm); 
   v.update(value); 
-  return v.digest(encoding);
+  return v.digest(encoding || this.encoding);
 };
 
 hash.checkPassword = function(password, input){
