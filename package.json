@@ -4,5 +4,5 @@
   "description": "Pretty common code to hash and check passwords",
   "keywords": ["hash", "password"],
   "repository": "git://github.com/framp/hash-password-default.git",
-  "author": "Federico Rampazzo <frampone@gmail.com> (http://)"
+  "author": "Federico Rampazzo <frampone@gmail.com> (http://framp.me)"
 }
